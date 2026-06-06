@@ -29,6 +29,8 @@ export const initPagination = (
           page = pageCount;
           break; // переход на последнюю страницу
       }
+    state.page = page;
+    state.rowsPerPage = limit;
     return Object.assign({}, query, {
       // добавим параметры к query, но не изменяем исходный объект
       limit,

@@ -1,8 +1,6 @@
-import { makeIndex } from "./lib/utils.js";
-
 const BASE_URL = "https://webinars.webdev.education-services.ru/sp7-api";
 
-export function initData(sourceData) {
+export function initData() {
   // переменные для кеширования данных
   let sellers;
   let customers;
@@ -16,7 +14,7 @@ export function initData(sourceData) {
       date: item.date,
       seller: sellers[item.seller_id],
       customer: customers[item.customer_id],
-      total: item.total_amount,
+      total: item.total_amount
     }));
 
   // функция получения индексов
