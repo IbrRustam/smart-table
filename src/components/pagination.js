@@ -51,8 +51,8 @@ export const initPagination = (
       }),
     );
     // переносим код, который делали под @todo: #2.5 (обратите внимание, что rowsPerPage заменена на limit)
-    fromRow.textContent = total > 0 ? (page - 1) * limit + 1 : 0; // С какой строки выводим
-    toRow.textContent = Math.min(page * limit, total); // До какой строки выводим, если это последняя страница, то отображаем оставшееся количество
+    fromRow.textContent = (page - 1) * limit + 1; // С какой строки выводим
+    toRow.textContent = Math.min((page * limit), total); // До какой строки выводим, если это последняя страница, то отображаем оставшееся количество
     totalRows.textContent = total; // Сколько всего строк выводим на всех страницах вместе (после фильтрации будет меньше)
   };
 
